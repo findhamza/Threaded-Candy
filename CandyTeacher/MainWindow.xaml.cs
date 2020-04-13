@@ -36,7 +36,8 @@ namespace CandyTeacher
 
         private async void stopButton_Click(object sender, RoutedEventArgs e)
         {
-            await Task.Run(() => candy.StopCandy());
+            if(candy!=null)
+                await Task.Run(() => candy.StopCandy());
         }
 
         private void clearButton_Click(object sender, RoutedEventArgs e)
